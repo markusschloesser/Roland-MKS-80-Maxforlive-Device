@@ -10,9 +10,9 @@ Maxforlive device for controlling the Roland MKS-80 from Ableton / Max for Live
 
 A Max for Live device for editing and automating the **Roland MKS-80** from **Ableton Live**.
 
-The MKS-80 primarily uses MIDI SysEx for editing. This device exposes (nearly, Tune Request doesn't work due to a bug in Ableton Live) all of its Patch and Tone parameters as Live controls, so you can automate filter cutoff, envelopes, LFOs, oscillator parameters and more, and use hardware controllers instead of relying on the MKS-80 front panel.
+The MKS-80 uses MIDI SysEx for editing. This device exposes (nearly, Tune Request doesn't work due to a bug in Ableton Live) all of its Patch and Tone parameters as Live controls, so you can automate filter cutoff, envelopes, LFOs, oscillator parameters and more, and use hardware controllers instead of relying on the MKS-80 front panel.
 
-**Latest device version: v50.** The current version receives compatible preset dumps automatically: you no longer have to enable separate MKS-80 or KnobKraft receive buttons.
+**Latest device version: v57.** The current version receives compatible preset dumps automatically: you no longer have to enable separate MKS-80 or KnobKraft receive buttons.
 ## New interface
 
 Four MGraphics/V8UI ADSR previews are embedded in the existing 170-pixel-high presentation UI: Upper Filter, Upper Amp, Lower Filter and Lower Amp.
@@ -39,7 +39,7 @@ The horizontal axis is a *normalized visual depiction* of the MKS-80's 0–100 p
 
 ## Installation and MIDI routing
 
-1. Download the newest `.amxd` (currently **`MKS-80 v50`**) from this repository or from the release assets, and drag it onto a MIDI track in Live.
+1. Download the newest `.amxd` (currently **`MKS-80 v57`**) from this repository or from the release assets, and drag it onto a MIDI track in Live.
 2. Configure the track and MIDI interface so the device can receive SysEx from the MKS-80 or KnobKraft. For incoming MIDI from the hardware, arm the track or otherwise enable MIDI monitoring, as appropriate for your Live setup.
 3. Configure MIDI output so that outgoing SysEx reaches the MKS-80.
 4. Turn on **Enable Sysex Out** when you want edits or imported KnobKraft presets to be sent to the hardware. **It starts ON when the device loads**.
@@ -96,6 +96,8 @@ Automation and external-control ordering follow the parameter's **Recall Order**
 
 ## Versions and changes
 
+- **v57** — relative and absolute Link mode for Upper<>Lower management
+- **v53** — copy Upper to Lower or Lower to Upper
 - **v50** — now with graphical ADSR Envelope editors for all 4 ENVs and an additional pop-up window for bigger and easier editing 
 - **v47** — Design changes
 - **v46** — Reordered all 131 remaining Live parameters (Upper then Lower, adjacent pairs) for recall and external-controller banks.
